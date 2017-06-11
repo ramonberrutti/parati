@@ -1,9 +1,16 @@
 $(document).ready(function() 
 {
     $( '#pagina-usuario').hide();
-    $( '#megustan').hide();
+    $( '#megustan').show();
     $( '#notasparami').hide();
-    $( '#compras' ).show();
+    $( '#compras' ).hide();
+
+    $( '#clickModa' ).click( function() 
+    {
+        
+
+    });
+
 
     $( "#logo-img" ).click( function() 
     {
@@ -39,9 +46,43 @@ $(document).ready(function()
     {
         $("#myModal").modal('hide');
         console.log('Usuario Registrado');
-        $('#Usuario').html( $('#nombreField').val() );
-        $('#perfilUsuario').html( $('#nombreField').val() );
+        $('#Usuario').text( $('#nombreField').val().toUpperCase() );
+        $('#perfilUsuario').text( $('#nombreField').val() );
 
+    });
+
+
+    $( "#clickMeGustan" ).click( function() 
+    {
+        $( '#megustan').show();
+        $( '#notasparami').hide();
+        $( '#compras' ).hide();
+
+        $( '#clickMeGustan' ).removeClass('btn-default').addClass( 'btn-primary-outline');
+        $( '#clickNotasParaMi' ).removeClass('btn-primary-outline').addClass( 'btn-default');
+        $( '#clickCompras' ).removeClass('btn-primary-outline').addClass( 'btn-default');
+    });
+
+    $( "#clickNotasParaMi" ).click( function() 
+    {
+        $( '#notasparami').show();
+        $( '#megustan').hide();
+        $( '#compras' ).hide();
+
+        $( '#clickNotasParaMi' ).removeClass('btn-default').addClass( 'btn-primary-outline');
+        $( '#clickMeGustan' ).removeClass('btn-primary-outline').addClass( 'btn-default');
+        $( '#clickCompras' ).removeClass('btn-primary-outline').addClass( 'btn-default');
+    });
+
+    $( "#clickCompras" ).click( function() 
+    {
+        $( '#compras' ).show();
+        $( '#megustan').hide();
+        $( '#notasparami').hide();
+
+        $( '#clickCompras' ).removeClass('btn-default').addClass( 'btn-primary-outline');
+        $( '#clickMeGustan' ).removeClass('btn-primary-outline').addClass( 'btn-default');
+        $( '#clickNotasParaMi' ).removeClass('btn-primary-outline').addClass( 'btn-default');
     });
     
     
