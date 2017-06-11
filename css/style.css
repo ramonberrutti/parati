@@ -27,3 +27,18 @@ tr > td
 {
   padding-bottom: 10px;
 }
+
+
+.menuprop
+{
+    display: none;
+    overflow: hidden;
+    z-index: 9;
+    margin: 0;
+    padding: 0;
+    top: 59px !important;
+    /*width: 250px !important;*/
+    text-align: left;
+    position: fixed !important; /* Para que este arriba */
+    border: 1px solid #2f2f2f;
+}
