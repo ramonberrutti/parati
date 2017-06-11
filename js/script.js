@@ -1,13 +1,23 @@
 $(document).ready(function() 
 {
+    var inicialValorRegistrar = $('#Usuario').text();
+
+    $("#pagina-principal").show();
     $( '#pagina-usuario').hide();
+    $( '#pagina-protagonista').hide();
+
     $( '#megustan').show();
     $( '#notasparami').hide();
     $( '#compras' ).hide();
 
     $( '#clickModa' ).click( function() 
     {
-        
+        if($('#Usuario').text() == inicialValorRegistrar )
+            return;
+
+        $( '#pagina-usuario').hide();
+        $("#pagina-principal").hide();
+        $( '#pagina-protagonista').show();
 
     });
 
@@ -15,13 +25,11 @@ $(document).ready(function()
     $( "#logo-img" ).click( function() 
     {
         $( '#pagina-usuario').hide();
-        $( '#pagina-usuario').hide();
+        $( '#pagina-protagonista').hide();
         $("#pagina-principal").show();
 
     });
 
-
-    var inicialValorRegistrar = $('#Usuario').text();
     $( ".registrar" ).click( function() 
     {
         if($('#Usuario').text() == inicialValorRegistrar )
