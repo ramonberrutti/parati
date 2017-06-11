@@ -1,0 +1,29 @@
+body 
+{ 
+    padding-top: 75px; 
+}
+
+li.registrar
+{
+    margin-bottom: 5px;
+}
+
+a.registrar
+{
+    font-size: 12px;
+}
+
+a.menu
+{
+    font-size: 24px;
+}
+
+#menu_menu li + li:before
+{
+    content: "";
+}
+
+tr > td
+{
+  padding-bottom: 10px;
+}
