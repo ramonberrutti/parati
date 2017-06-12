@@ -5,6 +5,7 @@ $(document).ready(function()
     $("#pagina-principal").show();
     $( '#pagina-usuario').hide();
     $( '#pagina-protagonista').hide();
+    $( '#pagina-fotoCarousel' ).hide();
 
     $( '#megustan').show();
     $( '#notasparami').hide();
@@ -16,8 +17,23 @@ $(document).ready(function()
             return;
 
         $( '#pagina-usuario').hide();
-        $("#pagina-principal").hide();
+        $( "#pagina-principal").hide();
+        $( '#pagina-fotoCarousel' ).hide();
         $( '#pagina-protagonista').show();
+
+    });
+
+    $( '#clickImgCarousel' ).css( 'cursor', 'pointer' );
+
+    $( '#clickImgCarousel' ).click( function() 
+    {
+        if($('#Usuario').text() == inicialValorRegistrar )
+            return;
+
+        $( '#pagina-usuario').hide();
+        $("#pagina-principal").hide();
+        $( '#pagina-protagonista').hide();
+        $( '#pagina-fotoCarousel' ).show();
 
     });
 
