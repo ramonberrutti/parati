@@ -1,6 +1,17 @@
+
+@font-face 
+{
+    font-family: "Goldoni";
+    src: url(../fonts/GOLDONI_DEMO.OTF) format("opentype");
+}
+
+
+
+
 body 
 { 
     padding-top: 75px; 
+    font-family: "Goldoni", Verdana, Tahoma !important;
 }
 
 li.registrar
